@@ -1,8 +1,12 @@
 
-public class CardinalConverter implements Converter {
+public class CardinalNumber extends Number {
     private static final String[] UNIDADES = {"", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove"};
     private static final String[] DEZ_A_DEZENOVE = {"dez", "onze", "doze", "treze", "quatorze", "quinze", "dezesseis", "dezessete", "dezoito", "dezenove"};
     private static final String[] DEZENAS = {"", "", "vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"};
+
+    public CardinalNumber(int number) {
+        super(number);
+    }
 
     public String converter(int numero) {
         return numero == 0 ? "zero" : converterParaPalavras(numero);

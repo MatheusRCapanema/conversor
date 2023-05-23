@@ -1,8 +1,12 @@
 
-public class OrdinalConverter implements Converter {
+public class OrdinalNumber extends Number {
     private static final String[] UNIDADES = {"", "primeiro", "segundo", "terceiro", "quarto", "quinto", "sexto", "sétimo", "oitavo", "nono"};
     private static final String[] DEZ_A_DEZENOVE = {"décimo", "décimo primeiro", "décimo segundo", "décimo terceiro", "décimo quarto", "décimo quinto", "décimo sexto", "décimo sétimo", "décimo oitavo", "décimo nono"};
     private static final String[] DEZENAS = {"", "", "vigésimo", "trigésimo", "quadragésimo", "quinquagésimo", "sexagésimo", "septuagésimo", "octogésimo", "nonagésimo"};
+
+    public OrdinalNumber(int number) {
+        super(number);
+    }
 
     public String converter(int numero) {
         return converterParaOrdinal(numero);

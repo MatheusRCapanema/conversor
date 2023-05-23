@@ -1,7 +1,11 @@
 
-public class RomanConverter implements Converter {
+public class RomanNumber extends Number {
     private static final int[] NUMEROS = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
     private static final String[] LETRAS = {"M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
+
+    public RomanNumber(int number) {
+        super(number);
+    }
 
     public String converter(int number) {
         StringBuilder roman = new StringBuilder();
